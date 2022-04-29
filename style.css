@@ -25,7 +25,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   display: grid;
   place-items: center;
-  background-image: url('./images/pattern-background-mobile.svg');
+  background-image: url("./images/pattern-background-mobile.svg");
   background-color: var(--pale-blue);
   background-repeat: no-repeat;
   padding: min(10%, 5rem) 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .sub_container,
-.btn{
+.btn {
   margin: 1.5rem 0;
 }
 .subtext {
@@ -93,16 +93,14 @@ p {
   padding: 1rem;
   color: var(--very-pale-blue);
 
-  box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
-  -webkit-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
-  -moz-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
+  box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, 0.15);
+  -webkit-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, 0.15);
+  -moz-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, 0.15);
 }
 .change,
 .btn {
   cursor: pointer;
 }
-
-
 
 .attribution {
   margin-top: 1rem;
@@ -113,8 +111,27 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
+/* Hover States */
+.change:hover {
+  color: hsl(245, 86%, 67%);
+  text-decoration: none;
+}
+.btn:hover {
+  color: var(--dark-blue);
+}
+.btn_primary:hover {
+  background-color: hsl(245, 86%, 67%);
+  color: var(--very-pale-blue);
+}
+
+.change,
+.btn{
+   transition: .2s ease;
+}
+
+/* Breakpoints */
 @media screen and (min-width: 375px) {
-   body {
-     background-image: url('./images/pattern-background-desktop.svg');
-   }
- }
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+}
