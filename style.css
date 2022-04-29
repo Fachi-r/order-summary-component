@@ -14,12 +14,96 @@
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 }
-
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Red Hat Display", sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--pale-blue);
+  padding: min(10%, 5rem) 0;
 }
 
+.container,
+.sub_container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sub_container,
+.btn{
+  margin: 1.5rem 0;
+}
+.subtext {
+  margin: 1rem 0;
+}
+
+.container {
+  flex-direction: column;
+  border-radius: 1rem;
+  max-width: 25rem;
+  width: 85vw;
+  background-color: white;
+}
+.sub_container {
+  justify-content: space-between;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.wrapper {
+  padding: 1.5rem 1.5rem 0;
+}
+.image {
+  width: 100%;
+}
+
+/* Typography */
+p {
+  color: var(--desaturated-blue);
+  line-height: 1.5;
+}
+.heading {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+.change {
+  color: var(--bright-blue);
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: small;
+}
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-weight: 900;
+}
+.btn_primary {
+  background-color: var(--bright-blue);
+  padding: 1rem;
+  color: var(--very-pale-blue);
+
+  box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
+  -webkit-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
+  -moz-box-shadow: 0px 14px 8px 2px hsl(245, 75%, 52%, .15);
+}
+.change,
+.btn {
+  cursor: pointer;
+}
+
+
+
 .attribution {
+  margin-top: 1rem;
   font-size: 11px;
   text-align: center;
 }
